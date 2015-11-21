@@ -1,0 +1,14 @@
+:local(.component) {
+  height: 100vh;
+  background-color: #f0f0f0;
+  padding: 2vh;
+  color: #666;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+:local(.component):nth-child(2n) {
+  background-color: #fff;
+}

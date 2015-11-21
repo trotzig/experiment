@@ -1,0 +1,14 @@
+/* Base Application Styles */
+body {
+  font-family: Avenir, Helvetica, Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+var {
+  font-style: normal;
+  font-weight: 600;
+  color: #444;
+}

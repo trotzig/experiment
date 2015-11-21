@@ -1,0 +1,13 @@
+:local(.component) {
+  opacity: 0;
+  transition: opacity 200ms, transform 200ms;
+}
+
+:local(.grow) {
+  transform: scale(.8);
+}
+
+:local(.appeared) {
+  opacity: 1;
+  transform: scale(1);
+}
