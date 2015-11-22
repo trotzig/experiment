@@ -8,7 +8,8 @@ class Grow extends React.Component {
   }
 
   render() {
-    const charactersToFit = Math.max(this.props.children.length, 7);
+    const numOfChars = this.props.length || this.props.children.length;
+    const charactersToFit = Math.max(numOfChars, 7);
     const width = window.innerWidth;
 
     const fontSize = width / (charactersToFit * 0.8);

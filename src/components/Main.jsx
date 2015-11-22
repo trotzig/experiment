@@ -1,4 +1,5 @@
 import Appear from 'components/Appear';
+import AppearSound from 'components/AppearSound';
 import Grow from 'components/Grow';
 import React from 'react';
 import Page from 'components/Page'
@@ -52,50 +53,76 @@ class AppComponent extends React.Component {
         </Page>
         <Page>
           <Appear><Grow>Only one person</Grow></Appear>
-          <Appear timeout={3000} grow>
-            <div style={{
-              position: 'relative',
-              display: 'inline-block',
-              marginTop: '3vh'
-            }}>
-              <img src='https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/005/08f/316/13ef886.jpg'/>
-              <div style={{
-                color: '#fff',
-                position: 'absolute',
-                top: 5,
-                right: 5,
-                fontWeight: 'bold',
-                fontSize: 20
-              }}>
-                7974
-              </div>
-            </div>
-          </Appear>
           <Appear timeout={1000}><Grow>has made more commits</Grow></Appear>
         </Page>
         <Page>
-          <Appear><Grow>Instead of</Grow></Appear>
+          <Appear><Grow>Chris Chan: 7974</Grow></Appear>
+          <Appear timeout={1000} grow>
+            <div style={{
+              marginTop: '3vh'
+            }}>
+              <img src='https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/005/08f/316/13ef886.jpg'/>
+            </div>
+          </Appear>
+        </Page>
+        <Page>
+          <Appear><Grow length={20}>Instead of</Grow></Appear>
           <Appear><b><Grow>QWERTY</Grow></b></Appear>
         </Page>
         <Page>
-          <Appear><Grow>Joe uses</Grow></Appear>
+          <Appear><Grow length={20}>Joe uses</Grow></Appear>
           <Appear><b><Grow>COLEMAK</Grow></b></Appear>
         </Page>
         <Page>
           <Appear>
-            <img style={{ marginBottom: '3vh' }} src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/KB_US-Colemak.svg/500px-KB_US-Colemak.svg.png'/>
+            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/KB_US-Colemak.svg/500px-KB_US-Colemak.svg.png'/>
           </Appear>
-          <Appear timeout={2000}><Grow>(That thing right there ^^ is messed up!)</Grow></Appear>
         </Page>
         <Page>
           <Appear><Grow>He's always trying to win people over to COLEMAK</Grow></Appear>
         </Page>
         <Page>
           <Appear><Grow>So far, his conversion rate is</Grow></Appear>
+          <AppearSound timeout={2000} src='http://freesound.org/data/previews/172/172949_3226163-lq.mp3'/>
           <Appear timeout={2000} grow><var><Grow>&lt;1%</Grow></var></Appear>
         </Page>
         <Page>
-          <Appear><Grow>Joe - keep fighting the fight!</Grow></Appear>
+          <Appear><Grow>That's terrible, Joe.</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear>
+            <img style={{ maxHeight: '45vh' }} src='https://joinbrigade.files.wordpress.com/2014/12/joe2.jpg'/>
+          </Appear>
+          <Appear><Grow length={15}>"I know."</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>Joe regularly contributes</Grow></Appear>
+          <Appear><Grow>to the Open Source community</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>SCSS-lint</Grow></Appear>
+          <Appear><Grow>(2nd contributor after @sds)</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>react-waypoint</Grow></Appear>
+          <Appear><Grow>(co-created with @trotzig)</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>Chunky-PNG</Grow></Appear>
+          <Appear><Grow>(recently assigned co-owner)</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear>
+            <img style={{maxHeight: '35vh'}} src='https://camo.githubusercontent.com/e971b90d14f27c03c8fba5efc994fed7080cadaa/68747470733a2f2f7261772e6769746875622e636f6d2f6469666675782f6469666675782f6d61737465722f6170702f6173736574732f696d616765732f6469666675782e706e67'/>
+          </Appear>
+          <Appear><Grow>(co-created with @trotzig)</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear>
+            <img style={{maxHeight: '30vh'}} src='https://camo.githubusercontent.com/db987668fefa786de285d9d02f20f51cb7856984/687474703a2f2f627269676164652e6769746875622e696f2f72656163742d73696d706c652d7069652d63686172742f6578616d706c652d7069652d63686172742e737667'/>
+          </Appear>
+          <Appear><Grow>react-simple-pie-chart</Grow></Appear>
+          <Appear><Grow length={25}>(creator of)</Grow></Appear>
         </Page>
       </div>
     );
