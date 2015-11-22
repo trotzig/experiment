@@ -70,6 +70,7 @@ class AppComponent extends React.Component {
           <Appear><b><Grow>QWERTY</Grow></b></Appear>
         </Page>
         <Page>
+          <AppearSound src='http://freesound.org/data/previews/243/243035_3592917-lq.mp3'/>
           <Appear><Grow length={20}>Joe uses</Grow></Appear>
           <Appear><b><Grow>COLEMAK</Grow></b></Appear>
         </Page>
