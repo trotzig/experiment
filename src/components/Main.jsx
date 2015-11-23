@@ -8,6 +8,8 @@ import Page from 'components/Page'
 require('normalize.css');
 require('styles/App.css');
 
+const blogPostImage = require('../images/blog_post.png')
+
 class AppComponent extends React.Component {
   componentDidMount() {
     document.addEventListener('keyup', (e) => {
@@ -133,7 +135,7 @@ class AppComponent extends React.Component {
         <Page>
           <Appear><Grow>Many of which are our most successful ones</Grow></Appear>
           <Appear>
-            <img style={{ width: '50vw', marginTop: '3vh' }} src='/blog_post.png'/>
+            <img style={{ width: '50vw', marginTop: '3vh' }} src={blogPostImage}/>
           </Appear>
         </Page>
         <Page>
