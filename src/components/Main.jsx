@@ -1,3 +1,4 @@
+import AnimatedPieChart from 'components/AnimatedPieChart';
 import Appear from 'components/Appear';
 import AppearSound from 'components/AppearSound';
 import Grow from 'components/Grow';
@@ -7,7 +8,6 @@ import Page from 'components/Page'
 require('normalize.css');
 require('styles/App.css');
 
-// let yeomanImage = require('../images/yeoman.png');
 class AppComponent extends React.Component {
   componentDidMount() {
     document.addEventListener('keyup', (e) => {
@@ -75,12 +75,10 @@ class AppComponent extends React.Component {
           <Appear><b><Grow>COLEMAK</Grow></b></Appear>
         </Page>
         <Page>
+          <Appear><Grow>He's always trying to win people over</Grow></Appear>
           <Appear>
-            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/KB_US-Colemak.svg/500px-KB_US-Colemak.svg.png'/>
+            <img style={{marginTop: '3vh' }} src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/KB_US-Colemak.svg/500px-KB_US-Colemak.svg.png'/>
           </Appear>
-        </Page>
-        <Page>
-          <Appear><Grow>He's always trying to win people over to COLEMAK</Grow></Appear>
         </Page>
         <Page>
           <Appear><Grow>So far, his conversion rate is</Grow></Appear>
@@ -98,7 +96,7 @@ class AppComponent extends React.Component {
         </Page>
         <Page>
           <Appear><Grow>Joe regularly contributes</Grow></Appear>
-          <Appear><Grow>to the Open Source community</Grow></Appear>
+          <Appear><Grow>to Open Source projects</Grow></Appear>
         </Page>
         <Page>
           <Appear><Grow>SCSS-lint</Grow></Appear>
@@ -120,10 +118,74 @@ class AppComponent extends React.Component {
         </Page>
         <Page>
           <Appear>
-            <img style={{maxHeight: '30vh'}} src='https://camo.githubusercontent.com/db987668fefa786de285d9d02f20f51cb7856984/687474703a2f2f627269676164652e6769746875622e696f2f72656163742d73696d706c652d7069652d63686172742f6578616d706c652d7069652d63686172742e737667'/>
+            <div style={{ width: '30vw', margin: '0 auto' }}>
+              <AnimatedPieChart/>
+            </div>
           </Appear>
           <Appear><Grow>react-simple-pie-chart</Grow></Appear>
           <Appear><Grow length={25}>(creator of)</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>He has written</Grow></Appear>
+          <Appear><var><Grow>11</Grow></var></Appear>
+          <Appear><Grow>blog posts for the company</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>Many of which are our most successful ones</Grow></Appear>
+          <Appear>
+            <img style={{ width: '50vw', marginTop: '3vh' }} src='/blog_post.png'/>
+          </Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>For some reason, he lives in the</Grow></Appear>
+          <Appear grow><Grow>EAST BAY</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>Because of that, he has spent</Grow></Appear>
+          <Appear grow><var><Grow>1,290 hours</Grow></var></Appear>
+          <Appear><Grow>on BART, getting to and from work</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>That's terrible, Joe.</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear>
+            <img style={{ maxHeight: '45vh' }} src='https://joinbrigade.files.wordpress.com/2014/12/joe2.jpg'/>
+          </Appear>
+          <Appear><Grow length={15}>"I know."</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>Did you know that...</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear>
+            <img style={{ maxHeight: '45vh', marginBottom: '3vh' }} src='https://cdn-images-1.medium.com/max/1013/1*cESd-NIbVnvnr0NRjVobOA.png'/>
+          </Appear>
+          <Appear><Grow>Joe makes his own illustrations</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear>
+            <img style={{ maxHeight: '45vh', marginBottom: '3vh' }} src='http://shiftingpixel.com/slir/w900/wp-content/uploads/2008/01/joe-lencioni.jpg'/>
+          </Appear>
+          <Appear><Grow>he used to play in a band</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear>
+            <img style={{ maxHeight: '45vh', marginBottom: '3vh' }} src='https://lh3.googleusercontent.com/-f9h46ik5uJU/U9NhIVah4gI/AAAAAAAArdg/pw7x9AHQQJk/w1060-h796-p-rw/IMG_20140715_205727.jpg'/>
+          </Appear>
+          <Appear><Grow>he is a seasoned pizza maker</Grow></Appear>
+          <Appear><Grow length={50}>(that's an actual Lencioni pizza)</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><Grow>Goodbye Joe</Grow></Appear>
+          <Appear><Grow>We'll miss you a lot.</Grow></Appear>
+        </Page>
+        <Page>
+          <Appear><b><Grow>A lot.</Grow></b></Appear>
+        </Page>
+        <Page>
+          <Appear><i><Grow>This scrollentation was created by @trotzig.</Grow></i></Appear>
+          <Appear><i><Grow>It is powered by components developed by Joe.</Grow></i></Appear>
         </Page>
       </div>
     );

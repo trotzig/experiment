@@ -66,6 +66,7 @@
     "react": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
     "react-dom": "^0.14.0",
+    "react-simple-pie-chart": "^0.2.2",
     "react-waypoint": "^1.1.2",
     "sass-loader": "^1.0.1"
   }

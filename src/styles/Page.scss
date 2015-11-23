@@ -1,14 +1,20 @@
 :local(.component) {
-  height: 100vh;
-  background-color: #f0f0f0;
-  padding: 2vh;
+  background-color: #fff;
   color: #666;
-  text-align: center;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: center;
+  padding: 2vh;
+  text-align: center;
+  position: relative;
+
+  img {
+    max-height: 80vh;
+    max-width: 80vw;
+  }
 }
 
 :local(.component):nth-child(2n) {
-  background-color: #fff;
+  background-color: #f0f0f0;
 }
