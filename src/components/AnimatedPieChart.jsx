@@ -9,6 +9,7 @@ class AnimatedPieChart extends React.Component {
     this.state = {
       value: 0,
     };
+    this._speed = 0.5;
   }
 
   componentDidMount() {
@@ -16,13 +17,18 @@ class AnimatedPieChart extends React.Component {
   }
 
   update() {
+    const newValue = this.state.value + this._speed;
+    if (this._speed > 0 && newValue > 70) {
+      this._speed = -0.5;
+    } else if (this._speed < 0 && newValue < 25) {
+      this._speed = 0.5;
+    }
+
     this.setState({
-      value: this.state.value + 1,
+      value: this.state.value + this._speed,
     });
 
-    if (this.state.value < 70) {
-      requestAnimationFrame(() => this.update());
-    }
+    requestAnimationFrame(() => this.update());
   }
 
   render() {

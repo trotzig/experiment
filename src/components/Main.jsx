@@ -8,8 +8,6 @@ import Page from 'components/Page'
 require('normalize.css');
 require('styles/App.css');
 
-const blogPostImage = require('../images/blog_post.png')
-
 class AppComponent extends React.Component {
   componentDidMount() {
     document.addEventListener('keyup', (e) => {
@@ -24,10 +22,18 @@ class AppComponent extends React.Component {
     return (
       <div>
         <Page>
-          <Appear><Grow>Joe Lencioni</Grow></Appear>
+          <Appear><var><Grow>Joe Lencioni</Grow></var></Appear>
           <Appear timeout={1000}><Grow>is leaving Brigade</Grow></Appear>
+          <Appear timeout={1400}>
+            <div style={{ marginTop: '10vh', color: '#ccc'}}>
+              <i>
+                <Grow length={45}>Turn speakers on and scroll down to continue</Grow>
+              </i>
+            </div>
+        </Appear>
         </Page>
         <Page>
+          <AppearSound src='http://freesound.org/data/previews/128/128553_129090-lq.mp3'/>
           <Appear>
             <img src='https://c1.staticflickr.com/3/2153/2276838135_a878f374a4.jpg'/>
           </Appear>
@@ -46,6 +52,7 @@ class AppComponent extends React.Component {
         <Page>
           <Appear><Grow>He has made over</Grow></Appear>
           <Appear timeout={1000} grow><var><Grow>7100</Grow></var></Appear>
+          <AppearSound timeout={1000} src='http://freesound.org/data/previews/48/48981_120830-lq.mp3'/>
           <Appear timeout={1500}><Grow>commits since day one</Grow></Appear>
         </Page>
         <Page>
@@ -135,16 +142,18 @@ class AppComponent extends React.Component {
         <Page>
           <Appear><Grow>Many of which are our most successful ones</Grow></Appear>
           <Appear>
-            <img style={{ width: '50vw', marginTop: '3vh' }} src={blogPostImage}/>
+            <img style={{ width: '50vw', marginTop: '3vh' }}
+              src='https://dl.dropboxusercontent.com/u/311144151/blog_post.png'/>
           </Appear>
         </Page>
         <Page>
           <Appear><Grow>For some reason, he lives in the</Grow></Appear>
-          <Appear grow><Grow>EAST BAY</Grow></Appear>
+          <Appear grow><var><Grow>EAST BAY</Grow></var></Appear>
         </Page>
         <Page>
           <Appear><Grow>Because of that, he has spent</Grow></Appear>
           <Appear grow><var><Grow>1,290 hours</Grow></var></Appear>
+          <AppearSound src='http://freesound.org/data/previews/38/38732_338714-lq.mp3' />
           <Appear><Grow>on BART, getting to and from work</Grow></Appear>
         </Page>
         <Page>
@@ -177,6 +186,7 @@ class AppComponent extends React.Component {
           </Appear>
           <Appear><Grow>he is a seasoned pizza maker</Grow></Appear>
           <Appear><Grow length={50}>(that's an actual Lencioni pizza)</Grow></Appear>
+          <AppearSound src='http://freesound.org/data/previews/182/182860_2168040-lq.mp3'/>
         </Page>
         <Page>
           <Appear><Grow>Goodbye Joe</Grow></Appear>
@@ -186,8 +196,26 @@ class AppComponent extends React.Component {
           <Appear><b><Grow>A lot.</Grow></b></Appear>
         </Page>
         <Page>
-          <Appear><i><Grow>This scrollentation was created by @trotzig.</Grow></i></Appear>
-          <Appear><i><Grow>It is powered by components developed by Joe.</Grow></i></Appear>
+          <Appear>
+            <i>
+              <Grow length={45}>
+                This <a href='https://github.com/trotzig/thank-joe'>presentation</a>
+                {' '}
+                was created by
+                {' '}
+                <a href='https://github.com/trotzig'>@trotzig</a>.
+              </Grow>
+            </i>
+          </Appear>
+          <Appear><i><Grow length={45}>It is powered by components developed by Joe.</Grow></i></Appear>
+
+          <Appear>
+            <i>
+              <Grow length={45}>
+                Sounds from <a href='http://freesound.org/'>freesound.org</a>
+              </Grow>
+            </i>
+          </Appear>
         </Page>
       </div>
     );
